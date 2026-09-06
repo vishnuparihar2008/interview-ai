@@ -12,6 +12,12 @@ function required(name) {
 const config = {
   port: parseInt(required("PORT") || "5000"),
   dbUri: required("MONGO_URI"),
+  jwt: {
+    secret: required("JWT_SECRET"),
+    secretExpiry: required("JWT_EXPIRES_IN") || "10m",
+    refreshSecret: required("REFRESH_JWT_SECRET"),
+    refreshSecretExpiry: required("REFRESH_JWT_EXPIRES_IN") || "7d",
+  },
 };
 
 export default config;
