@@ -18,6 +18,7 @@ const config = {
     refreshSecret: required("REFRESH_JWT_SECRET"),
     refreshSecretExpiry: required("REFRESH_JWT_EXPIRES_IN") || "7d",
   },
+  aiApi: required("GOOGLE_GEN_AI_KEY"),
 };
 
 export default config;
